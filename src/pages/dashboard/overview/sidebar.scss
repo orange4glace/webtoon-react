@@ -1,0 +1,38 @@
+@import '../../../global.scss';
+
+$tab_item_height: 60px;
+
+.component {
+    
+    height: 100%;
+
+    > .item {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        height: $tab_item_height;
+        line-height: $tab_item_height;
+
+        &.active {
+            background: #CFCFCF;
+        }
+
+        &:hover {
+            background: #DFDFDF !important;
+        }
+
+        > .icon {
+            float: left;
+            width: 60px;
+            height: $tab_item_height;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        > .label {
+            overflow: hidden;
+            margin-left: 60px;
+        }
+
+    }
+}

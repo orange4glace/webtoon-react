@@ -1,0 +1,172 @@
+.component {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+
+    > form {
+        width: 100%;
+        height: 100%;
+    }
+
+    .spliter {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-grow: 1;
+
+        > .split {
+            flex: 1;
+            box-sizing: border-box;
+
+            &:first-child {
+                border-right: 1px solid #ddd;
+            }
+
+            > .row {
+                padding: 20px;
+                border-bottom: 1px solid #ddd;
+
+                > .legend {
+                    line-height: 30px;
+                    color: #888;
+                    margin-top: 20px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+
+                &.genre, &.payed {
+
+                    > .items {
+                        margin-left: -30px;
+                    
+                        > .item {
+                            display: inline-block;
+                            margin-left: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    
+
+    .checkbox.disabled > .cbx > .box {
+        background: #ddd;
+    }
+
+    .cbx, .radio {
+        display: block;
+        line-height: 18px;
+        margin: auto;
+        user-select: none;
+        cursor: pointer;
+        span {
+        display: inline-block;
+        vertical-align: middle;
+        transform: translate3d(0,0,0);
+        &:first-child {
+            position: relative;
+            width: 18px;
+            height: 18px;
+            border-radius: 3px;
+            transform: scale(1);
+            vertical-align: middle;
+            border: 1px solid #9098A9;
+            transition: all .2s ease;
+            box-sizing: border-box;
+    
+            svg {
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            fill: none;
+            stroke: #FFFFFF;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 16px;
+            stroke-dashoffset: 16px;
+            transition: all .3s ease;
+            transition-delay: .1s;
+            transform: translate3d(0,0,0);
+            }
+    
+            &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #506EEC;
+            display: block;
+            transform: scale(0);
+            opacity: 1;
+            border-radius: 50%;
+            }
+        }
+        &:last-child {
+            padding-left: 8px;
+        }
+        &:hover span:first-child {
+        border-color: #506EEC;
+        }
+    }
+    }
+    
+    .inp-cbx:checked + .cbx, .inp-cbx:checked + .radio {
+        span {
+        &:first-child {
+            background: #506EEC;
+            border-color: #506EEC;
+            animation: wave .4s ease;
+            svg {
+            stroke-dashoffset: 0;
+            }
+            &:before {
+            transform: scale(3.5);
+            opacity: 0;
+            transition: all .6s ease;
+            }
+        }
+    }
+    }
+    .inp-cbx {
+        display: none;
+    }
+        
+    @keyframes wave {
+        50% {
+        transform: scale(.9);
+        }
+    }
+    
+    .radio {
+        span {
+            border-radius: 100%;
+        }
+    }
+
+
+    .dropper {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        height: 100px;
+        border: 1px dashed #ccc;
+        box-sizing: border-box;
+        
+        > input {
+            display: none;
+        }
+
+        > .placeholder {
+            text-align: center;
+            line-height: 100px;
+        }
+    }
+
+}

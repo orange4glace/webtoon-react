@@ -1,0 +1,43 @@
+@import '../../global.scss';
+
+$item_width: $container_width / 4;
+$item_height: $item_width * 1;
+
+.component {
+    margin-left: -1.6666666667%;
+
+    > .item {
+        display: inline-block;
+        width: 23.3333333%;
+        margin-left: 1.6666666667%;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+
+        > .thumbnail {
+            width: 100%;
+            height: 100px;
+            background-size: 100%;
+            border-bottom: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        
+        > .bottom {
+            box-sizing: border-box;
+            padding: 7px;
+
+            > .category {
+
+                > .cate {
+                    font-size: 12px;
+                    margin-right: 5px;
+    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}

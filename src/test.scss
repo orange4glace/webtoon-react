@@ -1,0 +1,80 @@
+.component {
+
+    padding: 20px;
+    max-width: 980px;
+    margin: 0 auto;
+
+    font-size: 13px;
+
+    > .box {
+        position: absolute;
+        width: 500px;
+        height: 70px;
+        margin: 20px;
+        padding: 20px;
+
+        &.A {
+            background: rgb(255, 215, 215);
+        }
+        &.B {
+            background: rgb(198, 201, 247);
+        }
+        
+        &.box-enter {
+            opacity: 0;
+        }
+
+        &.box-enter-active {
+            opacity: 1;
+            transition: .3s;
+            transition-delay: .3s;
+        }
+
+        &.box-exit {
+            opacity: 1;
+        }
+
+        &.box-exit-active {
+            opacity: 0;
+            transition: 1s;
+            transition-delay: 1s;
+        }
+
+        > .inner {
+
+            &.inner-enter {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            &.inner-enter-active {
+                opacity: 1;
+                transform: translateX(0px);
+                transition: 1s;
+            }
+
+            &.inner-exit {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+
+            &.inner-exit-active {
+                opacity: 0;
+                transform: translateX(30px);
+                transition: .3s;
+            }
+        }
+
+    }
+
+    a {
+        color: #777;
+        display: inline-block;
+        margin-right: 20px;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+}

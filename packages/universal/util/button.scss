@@ -1,0 +1,71 @@
+.component {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    
+    > .ripple-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        > .ripple {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: scale(0);
+            border-radius: 100%;
+            opacity: 0.5;
+            background-color: rgb(184, 32, 184);
+            animation: ripple 1000ms forwards;
+            transition: 1s;
+
+            &.up {
+                opacity: 0;
+            }
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(2);
+            }
+        }
+
+        @keyframes ripplefade {
+            to {
+                opacity: 0
+            }
+        }
+
+    }
+
+    > .content-container {
+
+        > .icon {
+            width: 16px;
+            height: 16px;
+            float: left;
+            padding-right: 5px;
+        }
+
+        > .content {
+            display: inline-block;
+            clear: both;
+        }
+
+    }
+
+    > .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+}

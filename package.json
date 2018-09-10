@@ -1,0 +1,47 @@
+{
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "informed": "^1.10.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-transition-pack": "^0.1.0",
+    "react-transition-group": "^2.4.0",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/runtime": "<=7.0.0-beta.55",
+    "autoprefixer": "^9.0.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.2",
+    "postcss-flexbugs-fixes": "^4.0.0",
+    "postcss-loader": "^2.1.6",
+    "react-hot-loader": "^4.3.4",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "svg-inline-loader": "^0.8.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+  }
+}

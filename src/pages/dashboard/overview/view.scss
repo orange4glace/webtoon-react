@@ -1,0 +1,11 @@
+.component {
+    flex: 1;
+
+    > .main {
+        display: flex;
+        flex: 1 0 0;
+        box-sizing: border-box;
+        overflow: auto;
+    }
+
+}

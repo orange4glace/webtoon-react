@@ -1,0 +1,75 @@
+@import '../../global.scss';
+
+$tab_width_open: 300px;
+
+.component {
+    
+    height: 100%;
+    display: flex;
+
+    > .sidebar {
+
+        position: relative;
+        flex: 0 0 $tab_width_open;
+        height: 100%;
+        background: #EFEFEF;
+        border-right: 1px solid #ddd;
+        overflow: hidden;
+        
+        > * {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+
+            &.anim-enter {
+                transform: translateY(20px);
+                opacity: 0
+            }
+            &.anim-enter-active {
+                transform: translateY(0px);
+                opacity: 1;
+                transition: .4s ease-out;
+                transition-delay: .4s;
+            }
+            &.anim-exit {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            &.anim-exit-active {
+                transform: translateY(20px);
+                opacity: 0;
+                transition: .4s ease-out;
+            }
+        }
+
+    }
+
+    > .main {
+        position: relative;
+        display: flex;
+        flex: 1 0 0;
+        box-sizing: border-box;
+        overflow: auto;
+
+        > * {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+
+            &.anim-enter {
+                opacity: 0
+            }
+            &.anim-enter-active {
+                opacity: 1;
+                transition: .4s ease-out;
+                transition-delay: .4s;
+            }
+            &.anim-exit {
+                opacity: 1;
+            }
+            &.anim-exit-active {
+                opacity: 0;
+                transition: .4s ease-out;
+            }
+        }
+    }
+
+}

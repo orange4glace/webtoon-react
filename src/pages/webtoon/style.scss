@@ -1,0 +1,49 @@
+$category-height: 30px;
+
+.component {
+
+    > .category {
+        position: relative;
+        width: 100%;
+        height: $category-height;
+        margin-top: 5px;
+        margin-bottom: 15px;
+
+        &:after {
+            position: absolute;
+            z-index: 0;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: #ddd;
+        }
+
+        > .item {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            line-height: $category-height;
+            margin-right: 20px;
+            font-size: 13px;
+
+            &.active {
+                color: #84afc5;
+
+                &:after {
+                    position: absolute;
+                    z-index: 1;
+                    content: '';
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: #84afc5;
+                }
+            }
+        }
+
+    }
+
+}

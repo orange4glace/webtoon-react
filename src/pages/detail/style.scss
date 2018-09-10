@@ -1,0 +1,28 @@
+.component {
+    width: 100%;
+    margin-top: 20px;
+    
+    > .overview {
+        height: 300px;
+        border: 1px solid #ddd;
+
+        > .thumbnail {
+            overflow: hidden;
+            height: 100%;
+            background-size: 100%;
+            background-position: center center;
+        }
+
+        > .description {
+            float: right;
+            min-width: 300px;
+            padding: 10px;
+
+            > .title {
+                font-size: 20px;
+            }
+        }
+        
+    }
+
+}
